@@ -27,32 +27,6 @@ angular.module('starter.controllers', [])
 
     }
     
-    
-    function($scope, $cordovaBarcodeScanner){
-        module.controller('BarcodeScannerCtrl', function($scope, $cordovaBarcodeScanner) {
-
-  $scope.scanBarcode = function() {
-    $cordovaBarcodeScanner.scan().then(function(imageData) {
-      alert("Que wena Conejo!");
-
-    }, function(err) {
-      alert("Mal Conejo, Mal!s");
-
-    });
-  };
-
-  // NOTE: encoding not functioning yet
-  $scope.encodeData = function() {
-    $cordovaBarcodeScanner.encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com").then(function(success) {
-      // Success! 
-    }, function(err) {
-      // An error occured. Show a message to the user
-
-    });      
-  }
-});
-
-    }
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {
