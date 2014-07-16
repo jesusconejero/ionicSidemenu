@@ -1,9 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-    
-    
-})
+
 
 .controller('FriendsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
@@ -19,6 +16,7 @@ angular.module('starter.controllers', [])
 .controller('PictureCtrl', function($scope, $cordovaCamera) {
 
   $scope.takePicture = function() {
+      alert("Amo aya");
     var options = { 
         quality : 75, 
         destinationType : Camera.DestinationType.DATA_URL, 
